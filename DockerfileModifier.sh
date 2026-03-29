@@ -2,7 +2,7 @@
 set -ex
 # Set variables first
 REPO_NAME='sequential-thinking-mcp'
-BASE_IMAGE=$(cat ./build_data/base-image 2>/dev/null || echo "node:alpine")
+BASE_IMAGE=$(cat ./build_data/base-image 2>/dev/null || echo "node:current-alpine")
 SEQUENTIAL_THINKING_VERSION=$(cat ./build_data/version 2>/dev/null || exit 1)
 SEQUENTIAL_THINKING_MCP_REPO="@modelcontextprotocol/server-sequential-thinking"
 SEQUENTIAL_THINKING_MCP_PKG="${SEQUENTIAL_THINKING_MCP_REPO}@${SEQUENTIAL_THINKING_VERSION}"
