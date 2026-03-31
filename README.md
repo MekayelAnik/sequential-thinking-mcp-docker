@@ -1,15 +1,15 @@
 # Sequential Thinking MCP Server
-### Multi-Architecture Docker Image for Distributed Deployment
+### Multi-Architecture Docker Image for Dynamic Problem Solving & Reasoning
 
 <div align="left">
 
-<img alt="sequential-thinking-mcp" src="https://img.shields.io/badge/Sequential_Thinking-MCP-9B59B6?style=for-the-badge&logo=databricks&logoColor=white" width="450">
+<img alt="sequential-thinking-mcp" src="https://img.shields.io/badge/Sequential Thinking-MCP-00E9A3?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMiA3TDEyIDEyTDIyIDdMMTIgMloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yIDEyTDEyIDE3TDIyIDEyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMiAxN0wxMiAyMkwyMiAxNyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+&logoColor=white" width="400">
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/mekayelanik/sequential-thinking-mcp.svg?style=flat-square)](https://hub.docker.com/r/mekayelanik/sequential-thinking-mcp)
 [![Docker Stars](https://img.shields.io/docker/stars/mekayelanik/sequential-thinking-mcp.svg?style=flat-square)](https://hub.docker.com/r/mekayelanik/sequential-thinking-mcp)
 [![License](https://img.shields.io/badge/license-GPL-blue.svg?style=flat-square)](https://raw.githubusercontent.com/MekayelAnik/sequential-thinking-mcp-docker/refs/heads/main/LICENSE)
 
-**[NPM Package](https://www.npmjs.com/package/@modelcontextprotocol/server-sequential-thinking)** • **[GitHub Repository](https://github.com/mekayelanik/sequential-thinking-mcp-docker)** • **[Docker Hub](https://hub.docker.com/r/mekayelanik/sequential-thinking-mcp)**
+**[Official Website](https://modelcontextprotocol.io/)** • **[Documentation](https://github.com/modelcontextprotocol/servers)** • **[Docker Hub](https://hub.docker.com/r/mekayelanik/sequential-thinking-mcp)**
 
 </div>
 
@@ -18,55 +18,75 @@
 ## 📋 Table of Contents
 
 - [Overview](#overview)
+- [Supported Architectures](#supported-architectures)
+- [Available Tags](#available-tags)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
-- [MCP Client Setup](#mcp-client-setup)
-- [Available Tools](#available-tools)
-- [Advanced Usage](#advanced-usage)
+- [MCP Client Configuration](#mcp-client-configuration)
+- [Network Configuration](#network-configuration)
+- [Updating](#updating)
 - [Troubleshooting](#troubleshooting)
-- [Resources & Support](#resources--support)
+- [Additional Resources](#additional-resources)
+- [Support & License](#support--license)
+- [Major Changes](#major-changes)
 
 ---
 
+## 😎 Buy Me a Coffee ☕︎
+**Your support encourages me to keep creating/supporting my open-source projects.** If you found value in this project, you can buy me a coffee to keep me inspired.
+
+<p align="center">
+<a href="https://07mekayel07.gumroad.com/coffee" target="_blank">
+<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60">
+</a>
+</p>
+
 ## Overview
 
-Sequential Thinking MCP Server empowers AI assistants with advanced reasoning capabilities through structured, step-by-step thinking processes. Enable your AI to break down complex problems, show its work, and arrive at better solutions through deliberate, transparent reasoning. Seamlessly integrates with VS Code, Cursor, Windsurf, Claude Desktop, PyCharm, and any MCP-compatible client.
+Sequential Thinking MCP Server provides dynamic problem-solving and structured reasoning capabilities through the Model Context Protocol. Built on Alpine Linux for minimal footprint and maximum security.
 
 ### Key Features
 
-✨ **Structured Reasoning** - Break complex problems into manageable steps  
-🧠 **Transparent Thinking** - See the AI's step-by-step thought process  
-🔐 **Secure & Configurable** - Optional API key authentication  
-⚡ **High Performance** - Fast, efficient reasoning engine  
-🌐 **CORS Ready** - Built-in CORS support for browser-based clients  
-🚀 **Multiple Protocols** - HTTP, SSE, and WebSocket transport support  
-🎯 **Zero Configuration** - Works out of the box with sensible defaults  
-🔧 **Highly Customizable** - Fine-tune every aspect via environment variables  
-📊 **Health Monitoring** - Built-in health check endpoint
+✨ **Multi-Architecture Support** - Native support for x86-64 and ARM64  
+🚀 **Multiple Transport Protocols** - HTTP, SSE, and WebSocket support  
+🔒 **Secure by Design** - Alpine-based with minimal attack surface  
+⚡ **High Performance** - ZSTD compression for faster deployments  
+🎯 **Production Ready** - Stable releases with comprehensive testing  
+🔧 **Easy Configuration** - Simple environment variable setup
 
-### Supported Architectures
+---
 
-| Architecture | Status | Notes |
-|:-------------|:------:|:------|
-| **x86-64** | ✅ Stable | Intel/AMD processors |
-| **ARM64** | ✅ Stable | Raspberry Pi, Apple Silicon |
+## Supported Architectures
 
-### Available Tags
+| Architecture | Tag Prefix | Status |
+|:-------------|:-----------|:------:|
+| **x86-64** | `amd64-<version>` | ✅ Stable |
+| **ARM64** | `arm64v8-<version>` | ✅ Stable |
 
-| Tag | Stability | Use Case |
-|:----|:---------:|:---------|
-| `stable` | ⭐⭐⭐ | **Production (recommended)** |
-| `latest` | ⭐⭐⭐ | Latest stable features |
-| `1.x.x` | ⭐⭐⭐ | Version pinning |
+> 💡 Multi-arch images automatically select the correct architecture for your system.
+
+---
+
+## Available Tags
+
+| Tag | Stability | Description | Use Case |
+|:----|:---------:|:------------|:---------|
+| `stable` | ⭐⭐⭐ | Most stable release | **Recommended for production** |
+| `latest` | ⭐⭐⭐ | Latest stable release | Stay current with stable features |
+| `1.0.21` | ⭐⭐⭐ | Specific version | Version pinning for consistency |
+| `beta` | ⚠️ | Beta releases | **Testing only** |
+
+### System Requirements
+
+- **Docker Engine:** 23.0+
+- **RAM:** Minimum 512MB
+- **CPU:** Single core sufficient
+
+> 🔒 **CRITICAL:** Do NOT expose this container directly to the internet without proper security measures (reverse proxy, SSL/TLS, authentication, firewall rules).
 
 ---
 
 ## Quick Start
-
-### Prerequisites
-
-- Docker Engine 23.0+
-- Network access for MCP protocol communication
 
 ### Docker Compose (Recommended)
 
@@ -80,16 +100,21 @@ services:
       - "8005:8005"
     environment:
       - PORT=8005
+      - INTERNAL_PORT=38011
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Dhaka
-      - PROTOCOL=SHTTP
-      - CORS=*
-      - API_KEY=your-secure-api-key-here
+      - NODE_ENV=production
+      - PROTOCOL=HTTP
+      - ENABLE_HTTPS=false
+      - HTTP_VERSION_MODE=auto
+      # Optional: require Bearer token auth at HAProxy layer
+      # - API_KEY=replace-with-strong-secret
+    hostname: sequential-thinking-mcp
+    domainname: local
 ```
 
 **Deploy:**
-
 ```bash
 docker compose up -d
 docker compose logs -f sequential-thinking-mcp
@@ -103,11 +128,14 @@ docker run -d \
   --restart=unless-stopped \
   -p 8005:8005 \
   -e PORT=8005 \
+  -e INTERNAL_PORT=38011 \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e PROTOCOL=SHTTP \
-  -e CORS=* \
-  -e API_KEY=your-secure-api-key-here \
+  -e TZ=Asia/Dhaka \
+  -e NODE_ENV=production \
+  -e PROTOCOL=HTTP \
+  -e ENABLE_HTTPS=false \
+  -e HTTP_VERSION_MODE=auto \
   mekayelanik/sequential-thinking-mcp:stable
 ```
 
@@ -115,12 +143,21 @@ docker run -d \
 
 | Protocol | Endpoint | Use Case |
 |:---------|:---------|:---------|
-| **HTTP** | `http://host-ip:8005/mcp` | **Recommended** |
+| **HTTP** | `http://host-ip:8005/mcp` | Best compatibility (recommended) |
 | **SSE** | `http://host-ip:8005/sse` | Real-time streaming |
-| **WebSocket** | `ws://host-ip:8005/message` | Bidirectional |
-| **Health** | `http://host-ip:8005/healthz` | Monitoring |
+| **WebSocket** | `ws://host-ip:8005/message` | Bidirectional communication |
 
-> ⏱️ Server ready in 5-10 seconds after container start
+When HTTPS is enabled (`ENABLE_HTTPS=true`), use TLS endpoints:
+
+| Protocol | Endpoint |
+|:---------|:---------|
+| **SHTTP** | `https://host-ip:8005/mcp` |
+| **SSE** | `https://host-ip:8005/sse` |
+| **WebSocket** | `wss://host-ip:8005/message` |
+
+> ⚠️ **Security Warning:** The container now defaults to HTTP (`ENABLE_HTTPS=false`) for easier local setup. Use `ENABLE_HTTPS=true` for production, public networks, or any untrusted environment.
+>
+> ⏱️ **ARM Devices:** Allow 30-60 seconds for initialization before accessing endpoints.
 
 ---
 
@@ -128,167 +165,145 @@ docker run -d \
 
 ### Environment Variables
 
-#### Core Settings
-
 | Variable | Default | Description |
 |:---------|:-------:|:------------|
-| `PORT` | `8005` | Server port (1-65535) |
+| `PORT` | `8005` | Internal server port |
+| `INTERNAL_PORT` | `38011` | Internal MCP server port used by supergateway |
 | `PUID` | `1000` | User ID for file permissions |
 | `PGID` | `1000` | Group ID for file permissions |
-| `TZ` | `Asia/Dhaka` | Container timezone |
-| `PROTOCOL` | `SHTTP` | Transport protocol |
-| `CORS` | _(none)_ | Cross-Origin configuration |
-| `API_KEY` | _(none)_ | Authentication key for server access |
+| `TZ` | `Asia/Dhaka` | Container timezone ([TZ database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)) |
+| `NODE_ENV` | `production` | Node.js environment |
+| `PROTOCOL` | `SHTTP` | Default transport protocol |
+| `API_KEY` | *(empty)* | Enables Bearer token auth (`Authorization: Bearer <API_KEY>`) |
+| `CORS` | *(empty)* | Comma-separated CORS origins, supports `*` |
+| `ENABLE_HTTPS` | `false` | Enables TLS termination in HAProxy |
+| `TLS_CERT_PATH` | `/etc/haproxy/certs/server.crt` | TLS cert path |
+| `TLS_KEY_PATH` | `/etc/haproxy/certs/server.key` | TLS private key path |
+| `TLS_PEM_PATH` | `/etc/haproxy/certs/server.pem` | Combined PEM file used by HAProxy |
+| `TLS_CN` | `localhost` | CN for auto-generated certificate |
+| `TLS_SAN` | `DNS:<TLS_CN>` | SAN for auto-generated certificate |
+| `TLS_DAYS` | `365` | Auto-generated cert validity period |
+| `TLS_MIN_VERSION` | `TLSv1.3` | Minimum TLS protocol (`TLSv1.2` or `TLSv1.3`) |
+| `HTTP_VERSION_MODE` | `auto` | `auto`, `all`, `h1`, `h2`, `h3`, `h1+h2` |
+| `DEBUG_MODE` | *(empty)* | Enables debug hold mode when set truthy |
 
-#### Advanced Settings
+### HTTPS and HTTP Version Notes
 
-| Variable | Default | Description |
-|:---------|:-------:|:------------|
-| `DEBUG_MODE` | `false` | Enable debug mode (`true`, `false`, `1`, `yes`) |
+- If `ENABLE_HTTPS=true` and cert files are missing, the container auto-generates a self-signed certificate.
+- If `TLS_CERT_PATH` and `TLS_KEY_PATH` exist, they are merged into `TLS_PEM_PATH` and used directly.
+- `HTTP_VERSION_MODE=h3` (or `auto`) enables HTTP/3 only when HAProxy build includes QUIC; otherwise it safely falls back.
 
-### Protocol Configuration
+### API Key Authentication Notes
 
-```yaml
-# HTTP/Streamable HTTP (Recommended)
-environment:
-  - PROTOCOL=SHTTP
+- Set `API_KEY` to enforce authentication at reverse proxy level.
+- Expected header format: `Authorization: Bearer <API_KEY>`.
+- Localhost health checks remain accessible for liveness/readiness.
 
-# Server-Sent Events
-environment:
-  - PROTOCOL=SSE
+### User & Group IDs
 
-# WebSocket
-environment:
-  - PROTOCOL=WS
+Find your IDs and set them to avoid permission issues:
+
+```bash
+id username
+# uid=1000(user) gid=1000(group)
 ```
 
-### API Key Configuration
+### Timezone Examples
 
 ```yaml
-# No authentication (development only)
-environment:
-  - API_KEY=
-
-# Secure authentication (production)
-environment:
-  - API_KEY=sk_prod_a1b2c3d4e5f6g7h8i9j0
-
-# Complex key with special characters
-environment:
-  - API_KEY=my-secure-key_2024@production:v1.0
+- TZ=Asia/Dhaka        # Bangladesh
+- TZ=America/New_York  # US Eastern
+- TZ=Europe/London     # UK
+- TZ=UTC               # Universal Time
 ```
-
-> 🔐 **Security:** Always use a strong API key in production (5-128 characters, alphanumeric with safe symbols: `_:.@+= -`)
-
-### CORS Configuration
-
-```yaml
-# Development - Allow all origins
-environment:
-  - CORS=*
-
-# Production - Specific domains
-environment:
-  - CORS=https://example.com,https://app.example.com
-
-# Mixed domains and IPs
-environment:
-  - CORS=https://example.com,192.168.1.100:3000
-
-# Regex patterns
-environment:
-  - CORS=/^https:\/\/.*\.example\.com$/
-```
-
-> ⚠️ **Security:** Never use `CORS=*` in production environments
 
 ---
 
-## MCP Client Setup
+## MCP Client Configuration
 
-### Transport Compatibility
+### Transport Support
 
 | Client | HTTP | SSE | WebSocket | Recommended |
 |:-------|:----:|:---:|:---------:|:------------|
 | **VS Code (Cline/Roo-Cline)** | ✅ | ✅ | ❌ | HTTP |
 | **Claude Desktop** | ✅ | ✅ | ⚠️* | HTTP |
+| **Claude CLI** | ✅ | ✅ | ⚠️* | HTTP |
+| **Codex CLI** | ✅ | ✅ | ⚠️* | HTTP |
+| **Codeium (Windsurf)** | ✅ | ✅ | ⚠️* | HTTP |
 | **Cursor** | ✅ | ✅ | ⚠️* | HTTP |
-| **Windsurf** | ✅ | ✅ | ⚠️* | HTTP |
-| **PyCharm (AI Assistant)** | ✅ | ✅ | ❌ | HTTP |
-| **IntelliJ IDEA** | ✅ | ✅ | ❌ | HTTP |
 
-> ⚠️ *WebSocket support is experimental
+> ⚠️ *WebSocket is experimental ([Issue #1288](https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1288))
+
+---
 
 ### VS Code (Cline/Roo-Cline)
 
-Add to `.vscode/settings.json`:
+Configure in `.vscode/settings.json`:
 
 ```json
 {
   "mcp.servers": {
     "sequential-thinking": {
       "url": "http://host-ip:8005/mcp",
-      "transport": "http",
-      "autoApprove": ["sequential_thinking"]
+      "transport": "http"
     }
   }
 }
 ```
 
-**With API Key:**
+---
 
-```json
-{
-  "mcp.servers": {
-    "sequential-thinking": {
-      "url": "http://host-ip:8005/mcp",
-      "transport": "http",
-      "headers": {
-        "Authorization": "Bearer your-api-key-here"
-      },
-      "autoApprove": ["sequential_thinking"]
-    }
-  }
-}
+### Claude Desktop App/Claude Code
+
+**Configuration:**
+### **With API_KEY**
+```
+claude mcp add-json github '{"type":"http","url":"http://localhost:8045/mcp","headers":{"Authorization":"Bearer <YOUR_API_KEY>"}}'
+```
+### **Without API_KEY**
+```
+claude mcp add-json github '{"type":"http","url":"http://localhost:8045/mcp"}'
 ```
 
-### Claude Desktop
+---
 
-**Config Locations:**
-- **Linux:** `~/.config/Claude/claude_desktop_config.json`
-- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+### Codex CLI
+
+Configure in `~/.codex/config.json`:
 
 ```json
 {
   "mcpServers": {
     "sequential-thinking": {
       "transport": "http",
-      "url": "http://localhost:8005/mcp"
+      "url": "http://host-ip:8005/mcp"
     }
   }
 }
 ```
 
-**With API Key:**
+---
+
+### Codeium (Windsurf)
+
+Configure in `.codeium/mcp_settings.json`:
 
 ```json
 {
   "mcpServers": {
     "sequential-thinking": {
       "transport": "http",
-      "url": "http://localhost:8005/mcp",
-      "headers": {
-        "Authorization": "Bearer your-api-key-here"
-      }
+      "url": "http://host-ip:8005/mcp"
     }
   }
 }
 ```
+
+---
 
 ### Cursor
 
-Add to `~/.cursor/mcp.json`:
+Configure in `~/.cursor/mcp.json`:
 
 ```json
 {
@@ -299,574 +314,262 @@ Add to `~/.cursor/mcp.json`:
     }
   }
 }
-```
-
-### Windsurf (Codeium)
-
-Add to `.codeium/mcp_settings.json`:
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "transport": "http",
-      "url": "http://host-ip:8005/mcp"
-    }
-  }
-}
-```
-
-### PyCharm (JetBrains IDEs)
-
-**For PyCharm, IntelliJ IDEA, WebStorm, and other JetBrains IDEs:**
-
-Add to `.idea/mcp_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "transport": "http",
-      "url": "http://localhost:8005/mcp"
-    }
-  }
-}
-```
-
-**With API Key:**
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "transport": "http",
-      "url": "http://localhost:8005/mcp",
-      "headers": {
-        "Authorization": "Bearer your-api-key-here"
-      }
-    }
-  }
-}
-```
-
-**Alternative: Environment Variables**
-
-Add to Run/Debug Configuration:
-
-```bash
-MCP_SERVER_URL=http://localhost:8005/mcp
-MCP_SERVER_TRANSPORT=http
-MCP_API_KEY=your-api-key-here
-```
-
-**PyCharm AI Assistant Integration:**
-
-1. Go to **Settings** → **Tools** → **AI Assistant**
-2. Add **External MCP Server**
-3. Configure URL: `http://localhost:8005/mcp`, Transport: `HTTP`
-
-### Claude Code
-
-Add to `~/.config/claude-code/mcp_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "transport": "http",
-      "url": "http://localhost:8005/mcp"
-    }
-  }
-}
-```
-
-Or configure via CLI:
-
-```bash
-claude-code config mcp add sequential-thinking \
-  --transport http \
-  --url http://localhost:8005/mcp
-```
-
-### GitHub Copilot CLI
-
-Add to `~/.github-copilot/mcp.json`:
-
-```json
-{
-  "mcpServers": {
-    "sequential-thinking": {
-      "transport": "http",
-      "url": "http://host-ip:8005/mcp"
-    }
-  }
-}
-```
-
-Or use environment variable:
-
-```bash
-export GITHUB_COPILOT_MCP_SERVERS='{"sequential-thinking":{"transport":"http","url":"http://localhost:8005/mcp"}}'
 ```
 
 ---
 
-## Available Tools
+### Testing Configuration
 
-### 🧠 sequential_thinking
+Verify with [MCP Inspector](https://github.com/modelcontextprotocol/inspector):
 
-Enable structured, step-by-step reasoning for complex problem-solving.
-
-**Parameters:**
-- `thought_process` (string, required): The reasoning steps to execute
-
-**Key Benefits:**
-- **Improved Accuracy** - Reduces errors through systematic thinking
-- **Transparency** - Shows complete reasoning process
-- **Complex Problem Solving** - Breaks down difficult tasks
-- **Better Decisions** - Evaluates options methodically
-
-**Use Cases:**
-
-**1. Mathematical Problem Solving**
-- Multi-step calculations
-- Word problems
-- Equation solving
-- Logic puzzles
-
-**2. Code Analysis & Debugging**
-- Tracing execution flow
-- Identifying bug causes
-- Analyzing algorithms
-- Reviewing code logic
-
-**3. Decision Making**
-- Evaluating trade-offs
-- Comparing alternatives
-- Risk assessment
-- Strategic planning
-
-**4. Research & Analysis**
-- Breaking down complex topics
-- Connecting related concepts
-- Synthesizing information
-- Drawing conclusions
-
-**Example Prompts:**
-
-**Mathematical:**
-- "Use sequential thinking to solve this word problem step by step"
-- "Break down this calculation and show your work"
-
-**Programming:**
-- "Use sequential thinking to debug this code"
-- "Walk through this algorithm step by step"
-
-**Decision Making:**
-- "Help me evaluate these options using sequential reasoning"
-- "Break down the pros and cons of each approach"
-
-**Analysis:**
-- "Use sequential thinking to analyze this complex topic"
-- "Show your reasoning process for this conclusion"
+```bash
+npm install -g @modelcontextprotocol/inspector
+mcp-inspector http://host-ip:8005/mcp
+```
 
 ---
 
-## Advanced Usage
+## Network Configuration
 
-### Production Configuration
+### Comparison
+
+| Network Mode | Complexity | Performance | Use Case |
+|:-------------|:----------:|:-----------:|:---------|
+| **Bridge** | ⭐ Easy | ⭐⭐⭐ Good | Default, isolated |
+| **Host** | ⭐⭐ Moderate | ⭐⭐⭐⭐ Excellent | Direct host access |
+| **MACVLAN** | ⭐⭐⭐ Advanced | ⭐⭐⭐⭐ Excellent | Dedicated IP |
+
+---
+
+### Bridge Network (Default)
 
 ```yaml
 services:
   sequential-thinking-mcp:
     image: mekayelanik/sequential-thinking-mcp:stable
-    container_name: sequential-thinking-mcp
-    restart: unless-stopped
     ports:
       - "8005:8005"
-    environment:
-      - PORT=8005
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
-      - PROTOCOL=SHTTP
-      - API_KEY=${SEQUENTIAL_THINKING_API_KEY}
-      - CORS=https://app.example.com,https://admin.example.com
-    
-    deploy:
-      resources:
-        limits:
-          cpus: '1.0'
-          memory: 512M
-        reservations:
-          cpus: '0.5'
-          memory: 256M
-    
-    healthcheck:
-      test: ["CMD", "nc", "-z", "localhost", "8005"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s
 ```
 
-### Using Environment Files
+**Benefits:** Container isolation, easy setup, works everywhere
+**Access:** `http://localhost:8005/mcp`
 
-Create `.env` file:
+---
 
-```env
-SEQUENTIAL_THINKING_PORT=8005
-SEQUENTIAL_THINKING_API_KEY=your-secure-production-key
-SEQUENTIAL_THINKING_PROTOCOL=SHTTP
-SEQUENTIAL_THINKING_CORS=https://yourdomain.com
-TZ=UTC
-PUID=1000
-PGID=1000
-```
-
-### Reverse Proxy Setup
-
-#### Nginx
-
-```nginx
-upstream sequential_thinking_mcp {
-    server localhost:8005;
-}
-
-server {
-    listen 443 ssl http2;
-    server_name thinking.example.com;
-    
-    ssl_certificate /path/to/cert.pem;
-    ssl_certificate_key /path/to/key.pem;
-    
-    location / {
-        proxy_pass http://sequential_thinking_mcp;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        
-        proxy_connect_timeout 300;
-        proxy_send_timeout 300;
-        proxy_read_timeout 300;
-    }
-}
-```
-
-#### Traefik
+### Host Network (Linux Only)
 
 ```yaml
 services:
   sequential-thinking-mcp:
     image: mekayelanik/sequential-thinking-mcp:stable
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.sequential-thinking.rule=Host(`thinking.example.com`)"
-      - "traefik.http.routers.sequential-thinking.entrypoints=websecure"
-      - "traefik.http.routers.sequential-thinking.tls.certresolver=letsencrypt"
-      - "traefik.http.services.sequential-thinking.loadbalancer.server.port=8005"
+    network_mode: host
 ```
 
-### Docker Network Setup
+**Benefits:** Maximum performance, no NAT overhead, no port mapping needed
+**Considerations:** Linux only, shares host network namespace
+**Access:** `http://localhost:8005/mcp`
+
+---
+
+### MACVLAN Network (Advanced)
 
 ```yaml
 services:
   sequential-thinking-mcp:
     image: mekayelanik/sequential-thinking-mcp:stable
+    mac_address: "AB:BC:CD:DE:EF:01"
     networks:
-      - mcp-network
-    environment:
-      - PORT=8005
-      - API_KEY=${SEQUENTIAL_THINKING_API_KEY}
-    
-  ai-application:
-    image: your-ai-app:latest
-    networks:
-      - mcp-network
-    environment:
-      - SEQUENTIAL_THINKING_URL=http://sequential-thinking-mcp:8005/mcp
+      macvlan-net:
+        ipv4_address: 192.168.1.100
 
 networks:
-  mcp-network:
-    driver: bridge
+  macvlan-net:
+    driver: macvlan
+    driver_opts:
+      parent: eth0
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24
+          gateway: 192.168.1.1
 ```
 
-### Multiple Instances with Load Balancing
+**Benefits:** Dedicated IP, direct LAN access
+**Considerations:** Linux only, requires additional setup
+**Access:** `http://192.168.1.100:8005/mcp`
 
-```yaml
-services:
-  sequential-thinking-mcp-1:
-    image: mekayelanik/sequential-thinking-mcp:stable
-    environment:
-      - PORT=8005
-      - API_KEY=${SEQUENTIAL_THINKING_API_KEY}
-  
-  sequential-thinking-mcp-2:
-    image: mekayelanik/sequential-thinking-mcp:stable
-    environment:
-      - PORT=8005
-      - API_KEY=${SEQUENTIAL_THINKING_API_KEY}
-  
-  nginx-lb:
-    image: nginx:alpine
-    ports:
-      - "8005:80"
-    volumes:
-      - ./nginx-lb.conf:/etc/nginx/nginx.conf:ro
+---
+
+## Updating
+
+### Docker Compose
+
+```bash
+docker compose pull
+docker compose up -d
+docker image prune -f
+```
+
+### Docker CLI
+
+```bash
+docker pull mekayelanik/sequential-thinking-mcp:stable
+docker stop sequential-thinking-mcp && docker rm sequential-thinking-mcp
+# Run your original docker run command
+docker image prune -f
+```
+
+### One-Time Update with Watchtower
+
+```bash
+docker run --rm \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  containrrr/watchtower \
+  --run-once \
+  sequential-thinking-mcp
 ```
 
 ---
 
 ## Troubleshooting
 
+### Pre-Flight Checklist
+
+- ✅ Docker Engine 23.0+
+- ✅ Port 8005 available
+- ✅ Sufficient startup time (ARM devices)
+- ✅ Latest stable image
+- ✅ Correct configuration
+
 ### Common Issues
 
-**Container Won't Start**
+#### Container Won't Start
 
 ```bash
+# Check Docker version
+docker --version
+
+# Verify port availability
+sudo netstat -tulpn | grep 8005
+
+# Check logs
 docker logs sequential-thinking-mcp
-docker pull mekayelanik/sequential-thinking-mcp:stable
-docker restart sequential-thinking-mcp
 ```
 
-**Connection Refused**
+#### Permission Errors
 
 ```bash
-docker ps | grep sequential-thinking-mcp
-docker port sequential-thinking-mcp
-curl http://localhost:8005/healthz
+# Get your IDs
+id $USER
+
+# Update configuration with correct PUID/PGID
+# Fix volume permissions if needed
+sudo chown -R 1000:1000 /path/to/volume
 ```
 
-**API Key Authentication Errors**
+#### Client Cannot Connect
 
 ```bash
-# Verify API key is set
-docker exec sequential-thinking-mcp env | grep API_KEY
-
-# Test with authentication
-curl -H "Authorization: Bearer your-api-key" \
-     http://localhost:8005/mcp
-```
-
-**CORS Errors**
-
-```yaml
-# Development
-environment:
-  - CORS=*
-
-# Production
-environment:
-  - CORS=https://yourdomain.com
-```
-
-**Permission Errors**
-
-```bash
-# Update PUID/PGID
-docker run -d \
-  -e PUID=$(id -u) \
-  -e PGID=$(id -g) \
-  mekayelanik/sequential-thinking-mcp:stable
-```
-
-**Debug Mode**
-
-```yaml
-environment:
-  - DEBUG_MODE=true
-```
-
-### Health Check Testing
-
-```bash
-# Basic health check
-curl http://localhost:8005/healthz
-
-# Test MCP endpoint
+# Test connectivity
 curl http://localhost:8005/mcp
+curl http://host-ip:8005/mcp
+curl -k https://localhost:8005/mcp
+curl -k https://host-ip:8005/mcp
 
-# Test with tool invocation
-curl -X POST http://localhost:8005/mcp \
-  -H "Content-Type: application/json" \
-  -d '{"method":"tools/list"}'
+# Check firewall
+sudo ufw status
+
+# Verify container
+docker inspect sequential-thinking-mcp | grep IPAddress
+```
+
+#### Slow ARM Performance
+
+- Wait 30-60 seconds after start
+- Monitor: `docker logs -f sequential-thinking-mcp`
+- Check resources: `docker stats sequential-thinking-mcp`
+- Use faster storage (SSD vs SD card)
+
+### Debug Information
+
+When reporting issues, include:
+
+```bash
+# System info
+docker --version && uname -a
+
+# Container logs
+docker logs sequential-thinking-mcp --tail 200 > logs.txt
+
+# Container config
+docker inspect sequential-thinking-mcp > inspect.json
 ```
 
 ---
 
-## Security Best Practices
-
-1. **Always Use Strong API Keys**
-   ```yaml
-   environment:
-     - API_KEY=$(openssl rand -base64 32)
-   ```
-
-2. **Never Use `CORS=*` in Production**
-   ```yaml
-   environment:
-     - CORS=https://yourdomain.com
-   ```
-
-3. **Use HTTPS with Reverse Proxy**
-   - Always terminate SSL at reverse proxy
-   - Use valid SSL certificates
-
-4. **Run as Non-Root User**
-   ```yaml
-   environment:
-     - PUID=1000
-     - PGID=1000
-   ```
-
-5. **Monitor Logs for Suspicious Activity**
-   ```bash
-   docker logs -f sequential-thinking-mcp | grep -E "unauthorized|failed"
-   ```
-
-6. **Keep Docker Image Updated**
-   ```bash
-   docker pull mekayelanik/sequential-thinking-mcp:stable
-   docker compose up -d
-   ```
-
----
-
-## Integration Examples
-
-### Python Integration
-
-```python
-import requests
-
-class SequentialThinkingMCP:
-    def __init__(self, base_url, api_key=None):
-        self.base_url = base_url
-        self.headers = {"Content-Type": "application/json"}
-        if api_key:
-            self.headers["Authorization"] = f"Bearer {api_key}"
-    
-    def sequential_thinking(self, thought_process):
-        payload = {
-            "method": "tools/call",
-            "params": {
-                "name": "sequential_thinking",
-                "arguments": {"thought_process": thought_process}
-            }
-        }
-        response = requests.post(self.base_url, headers=self.headers, json=payload)
-        return response.json()
-
-# Usage
-client = SequentialThinkingMCP("http://localhost:8005/mcp", "your-api-key")
-result = client.sequential_thinking("Solve: 2x + 5 = 15")
-```
-
-### Node.js Integration
-
-```javascript
-const axios = require('axios');
-
-class SequentialThinkingMCP {
-  constructor(baseURL, apiKey = null) {
-    this.baseURL = baseURL;
-    this.headers = {'Content-Type': 'application/json'};
-    if (apiKey) {
-      this.headers['Authorization'] = `Bearer ${apiKey}`;
-    }
-  }
-
-  async sequentialThinking(thoughtProcess) {
-    const response = await axios.post(
-      this.baseURL,
-      {
-        method: 'tools/call',
-        params: {
-          name: 'sequential_thinking',
-          arguments: {thought_process: thoughtProcess}
-        }
-      },
-      {headers: this.headers}
-    );
-    return response.data;
-  }
-}
-
-// Usage
-const client = new SequentialThinkingMCP('http://localhost:8005/mcp', 'your-api-key');
-const result = await client.sequentialThinking('Calculate factorial of 5');
-```
-
----
-
-## Resources & Support
+## Additional Resources
 
 ### Documentation
+- 📚 [Sequential Thinking Official Docs](https://github.com/modelcontextprotocol/servers)
 - 📦 [NPM Package](https://www.npmjs.com/package/@modelcontextprotocol/server-sequential-thinking)
-- 🔧 [GitHub Repository](https://github.com/mekayelanik/sequential-thinking-mcp-docker)
-- 🐳 [Docker Hub](https://hub.docker.com/r/mekayelanik/sequential-thinking-mcp)
+- 🔧 [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
 
-### MCP Resources
-- 📘 [MCP Protocol Specification](https://modelcontextprotocol.io)
-- 🎓 [MCP Documentation](https://modelcontextprotocol.io/docs)
-- 💬 [MCP Community](https://discord.gg/mcp)
+### Docker Resources
+- 🐳 [Docker Compose Best Practices](https://docs.docker.com/compose/production/)
+- 🌐 [Docker Networking](https://docs.docker.com/network/)
+- 🛡️ [Docker Security](https://docs.docker.com/engine/security/)
+
+### Monitoring
+- 📊 [Diun - Update Notifier](https://crazymax.dev/diun/)
+- ⚡ [Watchtower](https://containrrr.dev/watchtower/)
+
+---
+
+## 😎 Buy Me a Coffee ☕︎
+**Your support encourages me to keep creating/supporting my open-source projects.** If you found value in this project, you can buy me a coffee to keep me inspired.
+
+<p align="center">
+  <a href="https://07mekayel07.gumroad.com/coffee" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60">
+  </a>
+</p>
+
+## Support & License
 
 ### Getting Help
 
 **Docker Image Issues:**
-- [GitHub Issues](https://github.com/mekayelanik/sequential-thinking-mcp-docker/issues)
-- [Discussions](https://github.com/mekayelanik/sequential-thinking-mcp-docker/discussions)
+- GitHub: [sequential-thinking-mcp-docker/issues](https://github.com/MekayelAnik/sequential-thinking-mcp/issues)
 
-### Updating
+**Sequential Thinking MCP Issues:**
+- GitHub: [modelcontextprotocol/servers/issues](https://github.com/modelcontextprotocol/servers/issues)
+- Website: [modelcontextprotocol.io](https://modelcontextprotocol.io/)
 
-```bash
-# Docker Compose
-docker compose pull && docker compose up -d
+### Contributing
 
-# Docker CLI
-docker pull mekayelanik/sequential-thinking-mcp:stable
-docker stop sequential-thinking-mcp
-docker rm sequential-thinking-mcp
-# Re-run your docker run command
-```
+We welcome contributions:
+1. Report bugs via GitHub Issues
+2. Suggest features
+3. Improve documentation
+4. Test beta releases
 
----
+### License
 
-## FAQ
+GPL License. See [LICENSE](https://raw.githubusercontent.com/MekayelAnik/sequential-thinking-mcp-docker/refs/heads/main/LICENSE) for details.
 
-**Q: What is Sequential Thinking MCP?**  
-A: A Model Context Protocol server that enables AI assistants to perform structured, step-by-step reasoning.
-
-**Q: Do I need an API key?**  
-A: Optional but strongly recommended for production deployments.
-
-**Q: Which protocol should I use?**  
-A: We recommend SHTTP for best compatibility and performance.
-
-**Q: How do I secure my deployment?**  
-A: Use strong API key, enable CORS restrictions, use HTTPS with reverse proxy.
-
-**Q: What resources does the container need?**  
-A: Minimum 256MB RAM and 0.5 CPU cores. Recommended: 512MB RAM and 1 CPU core.
+Sequential Thinking MCP server has its own license - see [Main NPM repo](https://github.com/modelcontextprotocol/servers).
 
 ---
 
-## License
+### Major Changes
 
-GPL License - See [LICENSE](https://raw.githubusercontent.com/MekayelAnik/sequential-thinking-mcp-docker/refs/heads/main/LICENSE) for details.
+<ul>
+  <li><strong>Initial Release:</strong> Full CI/CD pipeline with HAProxy, HTTPS/TLS, QUIC/HTTP3, API key auth</li>
+</ul>
 
-**Disclaimer:** Unofficial Docker image for [@modelcontextprotocol/server-sequential-thinking](https://www.npmjs.com/package/@modelcontextprotocol/server-sequential-thinking).
-
----
+<p></p>
 
 <div align="center">
 
-[Report Bug](https://github.com/mekayelanik/sequential-thinking-mcp-docker/issues) • [Request Feature](https://github.com/mekayelanik/sequential-thinking-mcp-docker/issues) • [Contribute](https://github.com/mekayelanik/sequential-thinking-mcp-docker/pulls)
-
-⭐ **Star this project if you find it useful!**
+[⬆ Back to Top](#sequential-thinking-mcp-server)
 
 </div>
