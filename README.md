@@ -1,4 +1,17 @@
 # Sequential Thinking MCP Server
+
+<p align="center">
+  <a href="https://hub.docker.com/r/mekayelanik/sequential-thinking-mcp"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/mekayelanik/sequential-thinking-mcp?style=flat-square&logo=docker"></a>
+  <a href="https://hub.docker.com/r/mekayelanik/sequential-thinking-mcp"><img alt="Docker Stars" src="https://img.shields.io/docker/stars/mekayelanik/sequential-thinking-mcp?style=flat-square&logo=docker"></a>
+  <a href="https://github.com/mekayelanik/sequential-thinking-mcp-docker/pkgs/container/sequential-thinking-mcp"><img alt="GHCR" src="https://img.shields.io/badge/GHCR-ghcr.io%2Fmekayelanik%2Fsequential-thinking-mcp-blue?style=flat-square&logo=github"></a>
+  <a href="https://github.com/mekayelanik/sequential-thinking-mcp-docker/blob/main/LICENSE"><img alt="License: GPL-3.0" src="https://img.shields.io/badge/License-GPL--3.0-blue?style=flat-square"></a>
+  <a href="https://hub.docker.com/r/mekayelanik/sequential-thinking-mcp"><img alt="Platforms" src="https://img.shields.io/badge/Platforms-amd64%20%7C%20arm64-lightgrey?style=flat-square"></a>
+  <a href="https://github.com/MekayelAnik/sequential-thinking-mcp-docker/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/MekayelAnik/sequential-thinking-mcp-docker?style=flat-square"></a>
+  <a href="https://github.com/MekayelAnik/sequential-thinking-mcp-docker/forks"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/MekayelAnik/sequential-thinking-mcp-docker?style=flat-square"></a>
+  <a href="https://github.com/MekayelAnik/sequential-thinking-mcp-docker/issues"><img alt="GitHub Issues" src="https://img.shields.io/github/issues/MekayelAnik/sequential-thinking-mcp-docker?style=flat-square"></a>
+  <a href="https://github.com/MekayelAnik/sequential-thinking-mcp-docker/commits/main"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/MekayelAnik/sequential-thinking-mcp-docker?style=flat-square"></a>
+</p>
+
 ### Multi-Architecture Docker Image for Dynamic Problem Solving & Reasoning
 
 <div align="left">
