@@ -74,7 +74,7 @@ Sequential Thinking MCP Server provides dynamic problem-solving and structured r
 |:----|:---------:|:------------|:---------|
 | `stable` | ⭐⭐⭐ | Most stable release | **Recommended for production** |
 | `latest` | ⭐⭐⭐ | Latest stable release | Stay current with stable features |
-| `2026.8.31` | ⭐⭐⭐ | Specific version | Version pinning for consistency |
+| `1.0.0` | ⭐⭐⭐ | Specific version | Version pinning for consistency |
 | `beta` | ⚠️ | Beta releases | **Testing only** |
 
 ### System Requirements
